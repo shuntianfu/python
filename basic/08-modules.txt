@@ -1,0 +1,8 @@
+# .bashrc
+export PYTHONPATH="/path to file/"
+
+# python
+
+import sys
+
+print(sys.path)
