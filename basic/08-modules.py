@@ -54,4 +54,6 @@
 
 # import antigravity
 
+import my_module
 
+my_module.outer.inner()

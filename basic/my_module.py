@@ -9,3 +9,6 @@ def find_index(to_search, target):
             return key
     return -1
 
+class outer:
+    def inner():
+        print('outer.inner()')
