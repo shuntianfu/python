@@ -4,6 +4,7 @@ total = 0
 
 f = open('words.txt')
 
+
 def has_no_e(word):
     letter = 'e'
     if letter not in word:
@@ -13,6 +14,7 @@ def has_no_e(word):
 
 # print(has_no_e('apple'))
 
+
 for line in f:
     word = line.strip()
     if has_no_e(word) == True:
@@ -21,16 +23,17 @@ for line in f:
     total += 1
 
 
-
 # print(round(no_e_count / total, 2))
 
 avo_letters = 'aoeiu'
+
 
 def avoid(word):
     for letter in avo_letters:
         if letter in word:
             return False
     return True
+
 
 f.close()
 
@@ -40,7 +43,6 @@ for line in f:
     word = line.strip()
     if avoid(word) == True:
         print(word)
-
 
 
 f.close()

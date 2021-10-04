@@ -1,12 +1,17 @@
 import time
 
 # Very very long long time
+start = time.time()
 
-with open('words.txt') as f:
+with open('/home/zhang/learn_python/github_repo/python/word-play/words.txt') as f:
     words = []
     for line in f:
         word = line.strip()
         word = [word]
         words = words + word
 
-print(words)
+end = time.time()
+
+duration = end - start
+
+print(duration)

@@ -1,0 +1,99 @@
+
+---
+title: "Python Virtualenv"
+author: "zhang weibing"
+output: html_document
+---
+
+
+# Virtualenv
+
+## Install
+
+```{bash, eval=FALSE}
+pip install virtualenv
+```
+
+## Create folder
+
+```{bash, eval=FALSE}
+mkdir Environments
+
+cd !$
+
+```
+
+## Make virtualenv
+
+```{bash, eval=FALSE}
+virtualenv project1_env
+```
+
+## Inactive environment
+
+```{bash, eval=FALSE}
+source project1_env/bin/activate
+```
+
+## Install packages
+
+```{bash, eval=FALSE}
+pip install numpy pandas pytz
+
+pip list
+```
+
+## Export environment
+
+```{bash, eval=FALSE}
+pip freeze --local > requirments.txt
+```
+
+## Get out environment
+
+```{bash, eval=FALSE}
+deactivate
+```
+
+## Delete environment
+
+```{bash, eval=FALSE}
+rm -rf project1_env
+```
+
+## Make another environments
+
+Specify which python you are going to use.
+
+```{bash, eval=FALSE}
+virtualenv -p /usr/bin/python3.9 py39_evn
+```
+
+## Inactive enviroment  py39_evn/
+
+```{bash, eval=FALSE}
+source py39_evn/bin/activate
+```
+
+## Install packages in that environment
+
+```{bash, eval=FALSE}
+pip install -r requirments.txt
+```
+
+`py39_evn` means to be environment for your dependences or
+your packages, things like that for your project. But they are not actually for your project files.
+
+## Trouble Shooting
+
+'pip' is too slow. Create a `pip.conf` file in `.config/pip/`.
+
+```{bash, eval=FALSE}
+[global
+index-url=https://pypi.tuna.tsinghua.edu.cn/simple
+[install]
+trusted-host=mirrors.aliyun.com
+```
+
+
+# Code is tested

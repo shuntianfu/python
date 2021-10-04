@@ -5,11 +5,13 @@ import random
 
 t = [[1, 2], [3], [4, 5, 6]]
 
+
 def nested_sum(t):
     result = 0
     for li in t:
         result = sum(li) + result
     return result
+
 
 print(nested_sum(t))
 
@@ -20,6 +22,7 @@ print(nested_sum(t))
 
 t = [1, 2, 3]
 
+
 def cumsum(t):
     result = []
     i = 1
@@ -27,6 +30,7 @@ def cumsum(t):
         result.append(sum(t[:i]))
         i += 1
     return result
+
 
 print(cumsum(t))
 
@@ -36,18 +40,22 @@ print(cumsum(t))
 
 t = [1, 2, 3, 4, 8, 2]
 
+
 def middle(t):
     new_list = t[1:-1]
     return new_list
+
 
 print(middle(t))
 
 t = [1, 3, 2]
 
+
 def is_sorted(t):
     if t == sorted(t):
         return True
     return False
+
 
 print(is_sorted(t))
 
@@ -60,7 +68,9 @@ def is_anagram(word, another):
             return True
     return False
 
+
 print(is_anagram('zhang', 'angzh'))
+
 
 def has_duplicates(t):
     for i in t:
@@ -68,8 +78,9 @@ def has_duplicates(t):
             return True
     return False
 
+
 def has_duplicates_2(t):
-    start = 1 
+    start = 1
     for i in t:
         if i in t[start:len(t)]:
             return True
@@ -88,4 +99,3 @@ for i in range(23):
 
 print(sorted(students))
 print(has_duplicates(students))
-
